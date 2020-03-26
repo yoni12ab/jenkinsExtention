@@ -1,0 +1,34 @@
+{
+    "name": "Jenkins machine info",
+    "version": "1.0",
+    "description": "help to get device info",
+    "permissions": ["storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+        {
+          "matches": [
+            "https://jmaster-auto-new.s1.guru/*"
+          ],
+          "js": ["jenkinsPage/index.js"]
+        }
+      ],
+    "browser_action": {
+      "default_popup": "popup/index.html",
+      "default_icon": {
+        "16": "icons/icon-16.png",
+        "32": "icons/icon-32.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+      }
+    },
+    "icons": {
+        "16": "icons/icon-16.png",
+        "32": "icons/icon-32.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+    "manifest_version": 2
+}
